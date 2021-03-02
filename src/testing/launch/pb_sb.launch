@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Start the template publisher ROS node.-->
+  <node name="node_1" pkg="testing" type="sensor_publisher.py"
+    output="screen"/>
+
+  <!-- Start the template subscriber ROS node.-->
+  <node name="node_2" pkg="testing" type="sensor_subscriber.py"
+    output="screen"/>
+</launch>
