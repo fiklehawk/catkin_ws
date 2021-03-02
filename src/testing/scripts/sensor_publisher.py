@@ -13,11 +13,12 @@ def Publisher():
     Sensor_Data= sensor_info()
     Sensor_Data.distance = 4.5
     Sensor_Data.objectName = "Ball"
+
+    rospy.loginfo("All went well. Publishing topic")
     while not rospy.is_shutdown():
         # Publish the sensor information on the /sensor_info topic.
         si_publisher.publish(Sensor_Data)
         # Print log message if all went well.
-        rospy.loginfo("All went well. Publishing topic")
         rate.sleep()
 
 if __name__ == '__main__':
